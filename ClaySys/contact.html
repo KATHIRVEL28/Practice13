@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Contact Us, Page</title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <script>
+        function validateForm() {
+            var name = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+            if (name == "") {
+                alert("Please enter your name");
+                return false;
+            }
+            if (email == "") {
+                alert("Please enter your email address");
+                return false;
+            }
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+            if (message == "") {
+                alert("Please enter your message");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <img src="https://okcredit-blog-images-prod.storage.googleapis.com/2021/05/bikerepair1.jpg" with="40px" height="40px">
+            </div>
+            <div>
+                <a href="home.html">Home</a>
+                <a href="index.html">Sign in</a>
+                <a href="about.html">About us</a>
+                <a href="#">Contact us</a>
+            </div>
+        </nav>
+    </header>
+    <footer>
+        <p> &copy; 2024 Bike Service Association. All rights reserved. </p>
+    </footer>
+    <!--<div class="contant">
+        <!--<table>
+            <tr>
+                <td>Mobile Num:</td>
+                <td>9999955555</td>
+            </tr>
+            <tr>
+                <td>Email Id:</td>
+                <td><a href="mail.google.com">abcdef@gmail.com</a></td>
+            </tr>
+        </table>
+        <p class="about">General Service: A basic service typically includes oil change, filter cleaning, chain lubrication, and brake inspection. Specific Repairs: If you have specific problems with your bike, like starting issues or suspension noise, mention them while
+            contacting the service center. Additional Information: It's helpful to know the approximate mileage on your bike and any recent maintenance done. Tips: Call the service center beforehand to inquire about service packages, pricing, and appointment
+            availability. Ask about the turnaround time for the service, especially if you need your bike back urgently. Read online reviews to get a sense of other customer experiences at the service center.</p>
+
+        </div>-->
+
+    <div class="layout">
+        <form id="contactForm" onsubmit="return validateForm()">
+            <h1>INDIAN's BIKE WORLD <br>Contactus Page</h1>
+            <div class="field password">
+                <div class="input-area">
+                    <input type="text" id="username" placeholder="Youe name" name="username" class="f-control">
+                </div>
+            </div>
+            <div class="field email">
+                <div class="input-area">
+                    <input type="text" id="email" placeholder="Your Email Address" name="email" class="f-control">
+                </div>
+            </div>
+            <div class="field password">
+                <div class="input-area">
+                    <input type="text" id="message" placeholder="Message" name="message" class="f-control">
+                </div>
+            </div>
+            <button class="btn" type="submit" value="Submit"><font size='4'>Submit</font></button>
+        </form>
+        <table>
+            <tr>
+                <td>Mobile Num:</td>
+                <td>9999955555</td>
+            </tr>
+            <tr>
+                <td>Email Id:</td>
+                <td><a href="mail.google.com">abcdef@gmail.com</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://www.whatsapp.com/download"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpALPpR5ZIlim4GL11c40Nmcpgy_sJky8bJQ&s" width="30px" height="30px"></a>
+                </td>
+                <td>
+                    <a href="https://www.instagram.com/developer_nikhil27/"><img src="https://img.freepik.com/free-psd/3d-square-with-instagram-logo_125540-1566.jpg" width="40px" height="30px"></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Welcome To Bike World</title>
+    <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/master/24/Bike-1-512.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <script src="login.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <img src="https://okcredit-blog-images-prod.storage.googleapis.com/2021/05/bikerepair1.jpg" with="40px" height="40px">
+            </div>
+            <div>
+                <a href="home.html">Home</a>
+                <a href="index.html">Sign in</a>
+                <a href="about.html">About us</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+        </nav>
+    </header>
+    <div class="layout">
+        <form action="" name="form">
+            <h1>INDIAN's BIKE WORLD <br>User's Login Page</h1>
+            <div class="field email">
+                <div class="input-area">
+                    <input type="text" placeholder="Email Address" id="username" name="user" class="f-control">
+                    <div class="error"></div>
+                </div>
+
+            </div>
+            <div class="field password">
+                <div class="input-area">
+                    <input type="password" placeholder="Password" id="password" name="pass" class="f-control">
+                    <div class="error"></div>
+                </div>
+            </div>
+            <div class="actions">
+                <label><input type="checkbox" name="remember"> Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button class="btn" type="submit" value="Login" onclick="validateForm()"><font size='4'>Login</font></button>
+        </form>
+        <div class="sign-txt">Not yet Account?
+            <font size='4'><a href="signUp.html">
+                Signup now
+            </a></font>
+        </div>
+    </div>
+    <footer>
+        <p> &copy; 2024 Bike Service Association. All rights reserved. </p>
+    </footer>
+</body>
+
+</html>

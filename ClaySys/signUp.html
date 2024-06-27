@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign-Up Page</title>
+    <link rel="stylesheet" type="text/css" href="signUp.css">
+    <script>
+        function validateForm() {
+            var firstName = document.forms["signupForm"]["firstName"].value;
+            var lastName = document.forms["signupForm"]["lastName"].value;
+            var dob = document.forms["signupForm"]["DOB"].value;
+            var age = document.forms["signupForm"]["age"].value;
+            var gender = document.forms["signupForm"]["gender"].value;
+            var phone = document.forms["signupForm"]["mobile-num"].value;
+            var email = document.forms["signupForm"]["email"].value;
+            var address = document.forms["signupForm"]["Address"].value;
+            var username = document.forms["signupForm"]["user"].value;
+            var password = document.forms["signupForm"]["password"].value;
+            var confirmPassword = document.forms["signupForm"]["cpassword"].value;
+
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            var phonePattern = /^[0-9]{10}$/;
+
+            if (firstName == "") {
+                alert("Please enter your first name");
+                return false;
+            }
+            if (lastName == "") {
+                alert("Please enter your last name");
+                return false;
+            }
+            if (dob == "") {
+                alert("Please enter your date of birth");
+                return false;
+            }
+            if (age == "" || isNaN(age)) {
+                alert("Please enter a valid age");
+                return false;
+            }
+            if (gender == "") {
+                alert("Please select your gender");
+                return false;
+            }
+            if (!phonePattern.test(phone)) {
+                alert("Please enter a valid 10-digit phone number");
+                return false;
+            }
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+            if (address == "") {
+                alert("Please enter your address");
+                return false;
+            }
+            if (username == "") {
+                alert("Please enter your username");
+                return false;
+            }
+            if (password == "") {
+                alert("Please enter your password");
+                return false;
+            }
+            if (confirmPassword == "") {
+                alert("Please confirm your password");
+                return false;
+            }
+            if (password !== confirmPassword) {
+                alert("Passwords do not match");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <img src="https://okcredit-blog-images-prod.storage.googleapis.com/2021/05/bikerepair1.jpg" width="40px" height="40px">
+            </div>
+            <div>
+                <a href="home.html">Home</a>
+                <a href="#">Sign in</a>
+                <a href="about.html">About us</a>
+                <a href="contact.html">Contact us</a>
+            </div>
+        </nav>
+    </header>
+    <div class="header">
+        <form name="signupForm" onsubmit="return validateForm()">
+            <div class="container">
+                <center>
+                    <font size="7" color="#fff"><b> Sign-Up for Bike Service </b></font>
+                </center>
+                <div>
+                    <input type="text" name="firstName" class="input-group" placeholder="Firstname">
+                </div>
+                <div><input type="text" name="lastName" class="input-group" placeholder="Lastname"></div>
+                <div><label class="input-group2">D.O.B:</label>
+                    <input type="date" name="DOB" class="input-group1" placeholder="Date-of-Birth"></div>
+                <div><input type="text" name="age" class="input-group" placeholder="Age"></div>
+
+
+
+
+                <div class="select_gender">
+                    <label class="input-group2">Gender:</label>
+                    <input type="radio" name="gender" value="M">Male
+                    <input type="radio" name="gender" value="F">Female
+                    <input type="radio" name="gender" value="O">Other
+                </div>
+                <div class="pad">
+                    <input type="text" name="mobile-num" class="input-group" placeholder="phone numer" size="10">
+                </div>
+                <input type="text" class="input-group" placeholder="Enter Email" name="email">
+                <textarea name="Address" cols="35" class="input-group" placeholder="Address"></textarea>
+                <div class="select_option">
+                    <select class="form-select country" aria-label="Default select example" onchange="loadStates()">
+                        <option selected>Select Country</option>
+                    </select>
+                    <select class="form-select state" aria-label="Default select example" onchange="loadCities()">
+                        <option selected>Select State</option>
+                    </select>
+                    <select class="form-select city" aria-label="Default select example">
+                        <option selected>Select City</option>
+                    </select>
+                </div>
+                <input type="text" class="input-group" placeholder="Username" name="user">
+                <input type="password" class="input-group" placeholder="Password" name="password">
+                <input type="password" class="input-group" placeholder="Confirm Password" name="cpassword">
+
+                <button type="submit" name="Sign-Up" class="registerbtn">Sign up</button>
+
+                <div class="sign-txt">
+                    <p>
+                        <font size="5">already have an account? <a href="index.html" style="color: black;">Login now</a></font>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="app.js"></script>
+    <footer>
+        <p> &copy; 2024 Bike Service Association. All rights reserved. </p>
+    </footer>
+</body>
+
+</html>
